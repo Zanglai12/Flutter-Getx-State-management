@@ -7,6 +7,7 @@ import 'package:shopping/controller/dashboard_controller.dart';
 import 'package:shopping/controller/home_controller.dart';
 import 'package:shopping/view/cart_page.dart';
 import 'package:shopping/view/home_page.dart';
+import 'package:shopping/view/home_page2.dart';
 
 class DashboardPage extends StatelessWidget {
 
@@ -22,6 +23,7 @@ class DashboardPage extends StatelessWidget {
           index: controller.index.value,
           children: [
             HomePage(),
+            Homepage2(),
             CartPage(),
           ],
         ),
@@ -38,7 +40,8 @@ class DashboardPage extends StatelessWidget {
 
   List<BottomNavigationBarItem> bottomItems(){
     return [
-      BottomNavigationBarItem(icon: Icon(Feather.home) , label: "Home"),
+      BottomNavigationBarItem(icon: Icon(Feather.list) , label: "ListView"),
+      BottomNavigationBarItem(icon: Icon(Feather.grid) , label: "GridView"),
       BottomNavigationBarItem(icon: Icon(Feather.shopping_cart) , label: "Cart"),
     ];
   }

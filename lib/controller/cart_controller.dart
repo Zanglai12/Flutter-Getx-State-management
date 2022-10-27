@@ -20,8 +20,8 @@ class CartController extends GetxController {
     box.put("cart_items", items.toList());
     Get.showSnackbar(
       GetBar(
-        title: "Added",
-        message: "to cart list",
+        title: "Thêm vào giỏ hàng ",
+        message: "THÀNH CÔNG",
         duration: Duration(seconds: 2),
       ),
     );

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopping/controller/cart_controller.dart';
 import 'package:shopping/controller/home_controller.dart';
-import 'package:shopping/helper/marquee_widget.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_icons/flutter_icons.dart' as FI;
 
@@ -17,14 +16,14 @@ class ProductPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xff465bd8),
       appBar: AppBar(
-        title: MarqueeWidget(
+        title: TextButton(
           child: Text(
             item.title,
             style: TextStyle(color: Colors.black),
           ),
         ),
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blueGrey,
         iconTheme: IconThemeData(color: Colors.black),
       ),
       bottomNavigationBar: Container(
@@ -50,7 +49,7 @@ class ProductPage extends StatelessWidget {
               child: Row(
                 children: [
                   Icon(
-                    FI.FlutterIcons.shop_ent,
+                    FI.FlutterIcons.shop_mdi,
                     color: Colors.white,
                   ),
                   SizedBox(
@@ -89,7 +88,9 @@ class ProductPage extends StatelessWidget {
                 height: 20,
               ),
               Align(
-                  alignment: Alignment.centerLeft, child: Text(item.category)),
+                  alignment: Alignment.centerLeft, child: Text(item.category,
+                  style: TextStyle(fontSize: 12.0.sp, fontWeight: FontWeight.bold,color: Colors.amber),
+              )),
               SizedBox(
                 height: 10,
               ),

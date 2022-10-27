@@ -5,18 +5,19 @@ import 'package:shopping/controller/cart_controller.dart';
 import 'package:shopping/controller/home_controller.dart';
 import 'package:shopping/view/product_page.dart';
 import 'package:sizer/sizer.dart';
+import 'home_page2.dart';
 
 class HomePage extends StatelessWidget {
-
   final HomeController controller = Get.find<HomeController>();
   final CartController cc = Get.find<CartController>();
+  //bool searching = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Welcome!",
+          "Shop zanglai!",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
         centerTitle: true,
@@ -56,50 +57,133 @@ class HomePage extends StatelessWidget {
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 20, left: 16, bottom: 10, right: 16),
+                  EdgeInsets.only(top: 13, left: 18, bottom: 13, right: 18),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Find the best\nproduct for you",
-                    style: TextStyle(
-                        color: Color(0xff465bd8),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12.0.sp),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
+                  // Text(
+                  //   "Tìm kiếm",
+                  //   style: TextStyle(
+                  //       color: Color(0xff465bd8),
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 12.0.sp),
+                  // ),
+                  // SizedBox(
+                  //   height: 10,
+                  // ),
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                   // alignment: Alignment.center,
+                    width: double.infinity,
+                    //height: double.infinity,
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(30)),
-                    width: double.infinity,
-                    child: Row(
-                      children: [
-                        Icon(
-                          Feather.search,
-                          color: Color(0xff757575),
+                        borderRadius: BorderRadius.circular(34)),
+                    //width: double.infinity,
+                     child:
+                    //ListTile(
+                       TextField(
+                        //controller: controller,
+                        decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.search),
+                          hintText: "Tìm kiếm",
+                          //helperText: 'Helper Text',
+                          //counterText: '0 characters',
+                          //border: OutlineInputBorder(),
+                          border: InputBorder.none,
                         ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Search what you need",
-                          style: TextStyle(color: Color(0xff757575)),
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+                        //onChanged: onSearchTextChanged,
+                      ),
+                    //   //trailing: IconButton(icon: new Icon(Icons.cancel), onPressed: () {
+                    //     //controller.clear();
+                    //     //onSearchTextChanged('');
+                    //   ),
+                    // )
+                    // Center(
+                    //   child: TextField(
+                    //     decoration: InputDecoration(
+                    //       hintText: "tìm kiếm",
+                    //     ),
+                    //     onChanged: (text){
+                    //       text = text.toLowerCase();
+                    //       if(text.length > 0){
+                    //         searching = true;}
+                    //       //controller.itemItems[index].title.forEach(controller.itemItems[index].title)
+                    //     //   return Obx(() => controller.loading.value
+                    //     //       ? Center(
+                    //     //     child: CircularProgressIndicator(),
+                    //     //   )
+                    //     //   : controller.itemItems[index].title
+                    //      },
+                    //   )
+                    //   // Row(
+                    //   //   children: [
+                    //   //     Icon(
+                    //   //       Feather.search,
+                    //   //       color: Color(0xff757575),
+                    //   //     ),
+                    //   //     SizedBox(
+                    //   //       width: 10,
+                    //   //     ),
+                    //   //     Text(
+                    //   //       "Tìm kiếm",
+                    //   //       style: TextStyle(color: Color(0xff757575)),
+                    //   //     )
+                    //   //   ],
+                    //   // ),
+                    // ),
+
+                //],
+                     ),
+                  //)
+                ]
+              )
+            )
           ],
         ),
       ),
     );
   }
+
+  // Widget wcCategories(BuildContext context) {
+  //   return Row(
+  //     children: [
+  //       ElevatedButton(
+  //         style: ElevatedButton.styleFrom(
+  //           backgroundColor: Colors.blueGrey,
+  //           shape: RoundedRectangleBorder(
+  //             borderRadius: BorderRadius.circular(20), // <-- Radius
+  //           ),
+  //           padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+  //         ),
+  //         onPressed: () {
+  //           Navigator.push(
+  //             context,
+  //             MaterialPageRoute(builder: (context) => Homepage2()),
+  //           );
+  //         },
+  //         child: Icon(Icons.grid_on),
+  //       ),
+  //       ElevatedButton(
+  //         style: ElevatedButton.styleFrom(
+  //           backgroundColor: Colors.blueGrey,
+  //           shape: RoundedRectangleBorder(
+  //             borderRadius: BorderRadius.circular(20), // <-- Radius
+  //           ),
+  //           padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+  //         ),
+  //         onPressed: () {
+  //           Navigator.push(
+  //             context,
+  //             MaterialPageRoute(builder: (context) => HomePage()),
+  //           );
+  //         },
+  //         child: Icon(Icons.list_sharp),
+  //       ),
+  //
+  //     ],
+  //   );
+  // }
 
   Widget wCategories() {
     return Obx(() => SizedBox(
@@ -114,24 +198,61 @@ class HomePage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 4),
                     decoration: BoxDecoration(
                         border:
-                            Border.all(color: Color(0xffBDBDBD), width: 0.4),
+                            Border.all(color: Color(0xffe57373), width: 0.4),
                         borderRadius: BorderRadius.circular(30)),
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15),
-                        child: Text(
-                          controller.categoryItems[index].toString(),
-                          style: TextStyle(
-                              fontSize: 10.0.sp, color: Color(0xff616161)),
+                    child: ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(Colors.black38),
+                          shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
                         ),
-                      ),
-                    ),
+                           onPressed: () => {},
+                        child: Text(
+                              controller.categoryItems[index].toString(),
+                              style: TextStyle(
+                                  fontSize: 10.0.sp, //color: Color(0xff616161)),
+                            ),
+                      )
+                    // child: Center(
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.symmetric(horizontal: 15),
+                    //     child: ElevatedButton(
+                    //            onPressed: () => {},
+                    //             child: Text(
+                    //               controller.categoryItems[index].toString(),
+                    //               style: TextStyle(
+                    //                   fontSize: 10.0.sp, //color: Color(0xff616161)),
+                    //             ),
+                    //       )
+                    //     // child: Column(
+                    //     //   children: [
+                    //     //     ElevatedButton(
+                    //     //      onPressed: () => {},
+                    //     //       child: Text(
+                    //     //         controller.categoryItems[index].toString(),
+                    //     //         style: TextStyle(
+                    //     //             fontSize: 10.0.sp, color: Color(0xff616161)),
+                    //     //       ),
+                    //     // )
+                    //     //   ],
+                    //     // )
+                    //
+                    //     )
+                    //     // Text(
+                    //     //   controller.categoryItems[index].toString(),
+                    //     //   style: TextStyle(
+                    //     //       fontSize: 10.0.sp, color: Color(0xff616161)),
+                    //     // ),
+                    //   ),
+                    // ),
                   ),
-                  onTap: () {},
+                  //onTap: () {},
+                  )
                 );
               }),
         ));
   }
+
+
 
   Widget wItemList(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -139,7 +260,8 @@ class HomePage extends StatelessWidget {
         ? Center(
             child: CircularProgressIndicator(),
           )
-        : ListView.builder(
+        :
+  ListView.builder(
             itemCount: controller.itemItems.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
@@ -152,7 +274,7 @@ class HomePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                           colors: [
-                            const Color(0xFFFFFFFF),
+                            const Color(0xFFB3E5FC),
                             const Color(0xB0E7E9E7),
                           ],
                           begin: Alignment(0.2, 0.0),
@@ -184,7 +306,7 @@ class HomePage extends StatelessWidget {
                                   controller.itemItems[index].price.toString() +
                                       " \$",
                                   style: TextStyle(
-                                      fontSize: 12.0.sp,
+                                      fontSize: 15.0.sp,
                                       color: Color(0xff465bd8),
                                       fontWeight: FontWeight.bold),
                                 ),
