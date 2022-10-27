@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart' as FI;
 import 'package:get/get.dart';
 import 'package:shopping/controller/cart_controller.dart';
-import 'package:shopping/controller/home_controller.dart';
 import 'package:sizer/sizer.dart';
 
 class CartPage extends StatelessWidget {

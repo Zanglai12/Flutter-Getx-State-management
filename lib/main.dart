@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping/adapter/cart_hive_adapter.dart';
 import 'package:shopping/view/dashboard_page.dart';
-import 'package:shopping/view/splash_page.dart';
 import 'package:sizer/sizer.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';

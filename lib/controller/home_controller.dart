@@ -1,8 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:shopping/model/item_model.dart';
 import 'package:shopping/services/remote_services.dart';
-import 'package:shopping/view/signup_page.dart';
 
 class HomeController extends GetxController {
   var categoryItems = List<String>.empty().obs;

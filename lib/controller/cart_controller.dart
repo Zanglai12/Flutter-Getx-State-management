@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:shopping/adapter/cart_hive_adapter.dart';
 import 'package:shopping/model/item_model.dart';
 
 class CartController extends GetxController {

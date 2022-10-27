@@ -5,7 +5,6 @@ import 'package:shopping/controller/cart_controller.dart';
 import 'package:shopping/controller/home_controller.dart';
 import 'package:shopping/view/product_page.dart';
 import 'package:sizer/sizer.dart';
-import 'home_page2.dart';
 
 class HomePage extends StatelessWidget {
   final HomeController controller = Get.find<HomeController>();
